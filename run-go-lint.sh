@@ -5,6 +5,7 @@ for FILE in "$@"
 do
     output=$(golint "$FILE" 2>&1 )
     if ! [ -z "$output" ]
+    then
         PASS=false
 	echo "$output"
     fi
