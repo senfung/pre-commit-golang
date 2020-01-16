@@ -13,7 +13,7 @@ pre-commit install
 Add a file named `.pre-commit-config.yaml` into the root directory of your repository
 ```yaml
 repos:
-  - repo: git://github.com/Bahjat/pre-commit-golang
+  - repo: git://github.com/senfung/pre-commit-golang
     rev: master
     hooks:
       - id: go-fmt-import
@@ -25,19 +25,7 @@ repos:
       - id: go-static-check # install https://staticcheck.io/docs/
       - id: golangci-lint # requires github.com/golangci/golangci-lint
 ```
-## Contributing
-- Fork it
-- Create your feature branch `git checkout -b my-new-feature`
-- Commit your changes `git commit -am 'Add some feature'`
-- Push to the branch `git push origin my-new-feature`
-- Create new Pull Request
 
 ## Credits
-This repo is inspired by [dnephin/pre-commit-golang](https://github.com/dnephin/pre-commit-golang)
+This repo is inspired by [Bahjat/pre-commit-golang](https://github.com/Bahjat/pre-commit-golang). Fixed the issue of golint always passing (as golint always exit with 0).
 
-## Contributors
-
-![Contributors](https://readme-contributors.now.sh/Bahjat/pre-commit-golang?extension=jpg&width=300)
-
-## Finally
-If you like this hooks please give a star

@@ -3,9 +3,10 @@
 PASS=true
 for FILE in "$@"
 do
-    golint -set_exit_status "$FILE"
-    if [ "$?" -eq 1 ]; then
+    output=$(golint "$FILE" 2>&1 )
+    if ! [ -z "$output" ]
         PASS=false
+	echo "$output"
     fi
 done
 
